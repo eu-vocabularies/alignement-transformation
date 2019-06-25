@@ -10,13 +10,13 @@ This work is uncomplete and will be improved following the needs.
 
 1. Namespaces
 
-    align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>
-    rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-    owl:   <http://www.w3.org/2002/07/owl#>
-    skos:  <http://www.w3.org/2004/02/skos/core#>
-    dc:    <http://purl.org/dc/elements/1.1/>
-    xsd:   <http://www.w3.org/2001/XMLSchema#">
+    align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>    
+    rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   
+    rdfs:  <http://www.w3.org/2000/01/rdf-schema#>   
+    owl:   <http://www.w3.org/2002/07/owl#>   
+    skos:  <http://www.w3.org/2004/02/skos/core#>   
+    dc:    <http://purl.org/dc/elements/1.1/>   
+    xsd:   <http://www.w3.org/2001/XMLSchema#">   
 
 2. Relationship between relationships 
 
@@ -38,37 +38,37 @@ align:type |	the type of arity of alignement (total, partial, injective, surject
 
  1.Example (source file)
  
-    <?xml version="1.0" encoding="UTF-8"?>
-    <rdf:RDF
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-
-     <rdf:Description rdf:nodeID="node1d3oo5fj9x1">
-     <level xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</level>
-     <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1296"/>
-     <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1297"/>
-     <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1298"/>           
-     <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1299"/>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <rdf:RDF
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    
+         <rdf:Description rdf:nodeID="node1d3oo5fj9x1">
+         <level xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</level>
+         <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1296"/>
+         <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1297"/>
+         <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1298"/>           
+         <map xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:nodeID="node1d3oo5fj9x1299"/>
+          
+         <onto1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/"/>
+         <onto2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/"/>
+          
+         <type xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">??</type>
+             <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Alignment"/>
+         </rdf:Description>
       
-     <onto1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/"/>
-     <onto2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/"/>
+         <rdf:Description rdf:nodeID="node1d3oo5fj9x1296">
+         <entity1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/3683"/>
+         <entity2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/3683"/>             
+         <measure xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>           
+         <relation xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
+         <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Cell"/>
+         </rdf:Description>
       
-     <type xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">??</type>
-         <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Alignment"/>
-     </rdf:Description>
-  
-     <rdf:Description rdf:nodeID="node1d3oo5fj9x1296">
-     <entity1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/3683"/>
-     <entity2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/3683"/>             
-     <measure xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>           
-     <relation xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
-     <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Cell"/>
-     </rdf:Description>
-  
-     <rdf:Description rdf:nodeID="node1d3oo5fj9x1296">      
-     <mappingProperty xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>     
-     <status xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</status>
-    </rdf:Description>
+         <rdf:Description rdf:nodeID="node1d3oo5fj9x1296">      
+         <mappingProperty xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>     
+         <status xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</status>
+        </rdf:Description>
     
     </rdf:RDF>
 
@@ -76,24 +76,24 @@ align:type |	the type of arity of alignement (total, partial, injective, surject
  2. Result file
  
  
-    <?xml version="1.0" encoding="UTF-8"?>
-     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-     <rdf:Description rdf:about="http://data.europa.eu/uxp/">  
-         <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology"/>
-     </rdf:Description>
-      
-     <rdf:Description rdf:about="http://eurovoc.europa.eu/">   
-         <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology"/>
-     </rdf:Description>
-      
-     <rdf:Description rdf:about="itm:n#_405787">   
-         <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#alignment"/>  
-         <onto1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/"/>   
-         <onto2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/"/>
-     </rdf:Description>
-      
-     <rdf:Description rdf:about="http://data.europa.eu/uxp/3683">  
-         <exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/3683"/>
-     </rdf:Description> 
-     </rdf:RDF>
+        <?xml version="1.0" encoding="UTF-8"?>
+         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+         <rdf:Description rdf:about="http://data.europa.eu/uxp/">  
+             <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology"/>
+         </rdf:Description>
+          
+         <rdf:Description rdf:about="http://eurovoc.europa.eu/">   
+             <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology"/>
+         </rdf:Description>
+          
+         <rdf:Description rdf:about="itm:n#_405787">   
+             <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#alignment"/>  
+             <onto1 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://data.europa.eu/uxp/"/>   
+             <onto2 xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" rdf:resource="http://eurovoc.europa.eu/"/>
+         </rdf:Description>
+          
+         <rdf:Description rdf:about="http://data.europa.eu/uxp/3683">  
+             <exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/3683"/>
+         </rdf:Description> 
+         </rdf:RDF>
 
