@@ -10,13 +10,13 @@ This work is uncomplete and will be improved following the needs.
 
 1. Namespaces
 
-align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>
-rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-owl:   <http://www.w3.org/2002/07/owl#>
-skos:  <http://www.w3.org/2004/02/skos/core#>
-dc:    <http://purl.org/dc/elements/1.1/>
-xsd:   <http://www.w3.org/2001/XMLSchema#">
+    align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>
+    rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+    owl:   <http://www.w3.org/2002/07/owl#>
+    skos:  <http://www.w3.org/2004/02/skos/core#>
+    dc:    <http://purl.org/dc/elements/1.1/>
+    xsd:   <http://www.w3.org/2001/XMLSchema#">
 
 2. Relationship between relationships 
 
@@ -28,8 +28,7 @@ align:onto1	| URI of the 1st ontology	| keep as-is |	align:onto1 |	-	|
  align:onto2	| URI of the 2nd ontology	| keep as-is |	align:onto2	|-	|
  align:entity1 | The first aligned ontology entity	converted to| - |	skos:Concept	|
 align:entity2	| The second aligned ontology entity	|converted to	|-	|skos:Concept	|
- align:relation	| Identify a relation between ontology entities
-(> (subsumes), < (is subsumed), = (equivalent), % (incompatible), HasInstance, InstanceOf) |	converted to |	skos:exactMatch / skos:closeMatch |	-	|
+ align:relation	| Identify a relation between ontology entities (> (subsumes), < (is subsumed), = (equivalent), % (incompatible), HasInstance, InstanceOf) |	converted to |	skos:exactMatch / skos:closeMatch |	-	|
  align:measure	|the confidence that the relation holds between the first and the second entity. |	removed	|-|	- |	Only the alignment with  a measure of 1.0 will be converted. | 
 align:type |	the type of arity of alignement (total, partial, injective, surjective)	| removed (used for information) |	- |	- |
  align:status	|	removed	| -	| -	|
@@ -76,8 +75,8 @@ align:type |	the type of arity of alignement (total, partial, injective, surject
  
  2. Result file
  
-
-     <?xml version="1.0" encoding="UTF-8"?>
+ 
+    <?xml version="1.0" encoding="UTF-8"?>
      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
      <rdf:Description rdf:about="http://data.europa.eu/uxp/">  
          <rdf:type rdf:resource="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology"/>
@@ -97,5 +96,4 @@ align:type |	the type of arity of alignement (total, partial, injective, surject
          <exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/3683"/>
      </rdf:Description> 
      </rdf:RDF>
-
 
